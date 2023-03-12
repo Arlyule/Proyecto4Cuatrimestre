@@ -1,0 +1,14 @@
+
+    <nav class="opciones">
+        <button type="button" routerLink="/menu">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</button>
+        <button type="button" routerLink="/cart">
+            <i class="fa-solid fa-cart-shopping"></i> Carrito</button>
+    </nav>
+    <div class="contenido">
+        <div class="row">
+            <div *ngFor="let producto of producto">
+                <app-product-lis [producto]="producto"></app-product-lis>
+            </div>
+        </div>
+    </div>

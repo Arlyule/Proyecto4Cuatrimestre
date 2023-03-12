@@ -1,0 +1,37 @@
+button[type="submit"]
+{
+    border: none;
+    outline: none;
+    position: fixed;
+    background: #45f3ff;
+    padding: 10px 30px;
+
+    height: 48px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+}
+
+.link{
+    margin: 10px;
+    display: flex;
+
+}
+
+.nose{
+    display: flex;
+    position: relative;
+}
+
+.link2{
+    margin-top: 200px;
+}

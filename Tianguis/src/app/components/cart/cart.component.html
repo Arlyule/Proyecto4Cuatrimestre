@@ -1,0 +1,35 @@
+<body>
+    <nav class="opciones">
+        <button type="button" routerLink="/menu">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Exit</button>
+        <button type="button" routerLink="/list2">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Articulos</button>
+    </nav>
+    <div class="carritoadd">
+        <div class="articulos" *ngIf="cartItems.length < 1">
+            <div class="mensaje">
+                <h4>Sin articulos en el Carrito</h4>
+            </div>
+        </div>
+        <div class="articulos" *ngIf="cartItems.length > 0">
+            <div class="mensaje">
+                <h4>Tu Carrito</h4>
+            </div>
+            <div class="item">
+                <div class="art" *ngFor="let item of cartItems; index as i">
+                    <app-cart-item [cartItem]="item"></app-cart-item>
+                    <i class="far fa-trash-alt fa-2x" (click)="deleteItem(i)"></i>
+                </div>
+            </div>
+        </div>
+        <div class="tarjetas">
+            <div class="total">
+                <strong>Total: </strong>${{total}} 
+            </div>
+            <button type="button" (click)="emptyCart()">
+                <i class="fas fa-ban"></i> Empty Cart
+            </button>
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+        </div>
+    </div>
+</body>

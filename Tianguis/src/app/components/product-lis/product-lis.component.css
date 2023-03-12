@@ -1,0 +1,121 @@
+
+
+.card
+{
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 350px;
+    border-radius: 2px;
+    background: #28292d;
+    z-index: 8;
+    padding: 5px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    border-color: #45f3ff;
+    border-width: 5px;
+    border-style: solid;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button[type="submit"]
+{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 10px 30px;
+    width: 250px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    
+}
+
+
+.imagen{
+    background-color: #28292d;
+    width: 378px;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border-color: #45f3ff;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    margin-bottom: 50px;
+}
+
+.imagen{
+    width: 500px;
+    height: 328px;
+    display: flex;
+    position: absolute;
+    
+
+}
+
+.imagen img{
+
+    width: 500px;
+    height: 328px;
+
+}
+.contenido{
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    justify-content: end;
+    position: relative;
+    margin-left: 550px;
+}
+
+.ordenar h3{
+    color: #45f3ff;
+    font-size: 30px;
+}
+
+.ordenar p{
+    font-size: 20px;
+    color: #45f3ff;
+    margin: 3px;
+    
+}
+
+.contenido h2{
+    color: #45f3ff;
+    font-size: 30px;
+}
+
+.contenido p{
+    font-size: 20px;
+    color: #45f3ff;
+    margin: 3px;
+    
+}
+
+.contenido a{
+    font-size: 10px;
+    color: #45f3ff;
+    margin: 3px;
+    
+}
+
+.acomodo{
+    display: flex;
+}

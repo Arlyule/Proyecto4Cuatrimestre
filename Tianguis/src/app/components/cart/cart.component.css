@@ -1,0 +1,142 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.fa-trash-alt {
+    color: red;
+    cursor: pointer;
+}
+
+button[type="button"]
+{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 10px 30px;
+    width: 180px;
+    height: 48px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+body{
+    background-color:#23242a ;
+    min-height: 100vh;
+}
+
+.carritoadd{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 1400px;
+    height: auto;
+    background-color: #28292d;
+
+}
+
+.articulos{
+    width: 1000px;
+    height: auto;
+    border-color: #45f3ff;
+    border-width: 5px;
+    border-style: solid;
+
+}
+
+.tarjetas{
+    width: 400px;
+    height: auto;
+    border-color: #45f3ff;
+    border-width: 5px;
+    border-style: solid; 
+    padding: 10px;
+}
+
+
+
+.mensaje{
+    height: 80px;
+    width: 950px;
+    margin-left: 22px;
+    background-color: #23242a;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding: 18px;
+    border-radius: 8px;
+    border-color: #45f3ff;
+    border-width: 5px;
+    border-style: solid;
+    margin-bottom: 15px;
+
+
+}
+
+.mensaje h4{
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    color: #45f3ff;
+}
+
+.si{
+    display: flex;
+    height: 50px;
+    width: 950px;
+}
+
+.art{
+    display: flex;
+    justify-content: space-between;
+    width: 950px;
+    height: 60px;
+    margin-left: 22px;
+    border-color: #45f3ff;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+}
+
+.art p{
+    color: #45f3ff;
+}
+
+.total{
+    height: 30%;
+    border-color: #45f3ff;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 8px;
+    padding: 9%;
+    color: #45f3ff;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.total strong{
+    color: #45f3ff;
+    margin-left: 25%;
+    font-size: 22px;
+}
+
+button[type="button"]
+{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 10px 30px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 350px;
+}

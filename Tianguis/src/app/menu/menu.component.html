@@ -1,0 +1,172 @@
+<div class="bodynav">
+   <div class="boxnav">
+      <div class="formnav">
+         <div class="logo">
+            <h2>TiangisOnline</h2>
+            <i></i>
+         </div>
+         <div class="acomodo">
+            <button *ngIf="!isLonged && !islogin" type="submit" routerLink="/login">
+               <i class="fa-solid fa-right-to-bracket "></i> LoginSign</button>
+            <button *ngIf="isLonged || islogin" type="submitexit" (click)="logOut()">
+               <i class="fa-solid fa-right-from-bracket"></i> Login Out</button>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="bodycontent">
+   <div class="formcontent">
+      <h5>Mas Opciones</h5>
+      <br>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+         <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+               aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+               aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+               aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+               aria-label="Slide 4"></button>
+         </div>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <a href="https://www.mercadolibre.com.mx/"><img src="https://i.blogs.es/b25b51/mera/1366_2000.jpg"
+                     class="d-block w-80"></a>
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Mercado Libre</h5>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <a href="https://www.amazon.com.mx/"><img
+                     src="https://m.media-amazon.com/images/G/33/gc/designs/livepreview/amazon_dkblue_noto_email_v2016_mx-main._CB468300557_.png"
+                     class="d-block w-80" alt="..."></a>
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Amazon</h5>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <a href="https://mx.aliexpress.com/"><img
+                     src="https://ecommerce-platforms.com/wp-content/uploads/2020/11/aliexpress-review-social.png"
+                     class="d-block w-80" alt="..."></a>
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Aliexpress</h5>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <a href="https://www.shein.com.mx/"><img
+                     src="https://s3.amazonaws.com/businessinsider.mx/wp-content/uploads/2022/09/22165057/shein_tiendas_business_insider_mexico-1280x620.jpg"
+                     class="d-block w-80" alt="..."></a>
+               <div class="carousel-caption d-none d-md-block">
+                  <h5>Shein</h5>
+               </div>
+            </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+         </button>
+      </div>
+      <br>
+
+   </div>
+   <div class="formas">
+
+      <img *ngIf="isLonged" src="{{userLogged.photoUrl}}" class="rounded-circle mr-3" style="width: 50px">
+      <ul class="foto" *ngIf="isLonged">
+         <li class="nav-item">
+            <a class="nav-link">
+               {{userLogged.name}}
+            </a>
+         </li>
+      </ul>
+      <br>
+      <div class="links">
+         <div class="link">
+            <a routerLink="/map">
+               <i class="fa-sharp fa-solid fa-map-location-dot"></i> Mi Ubicacion</a>
+         </div>
+         <br>
+         <div class="link">
+            <a routerLink="/videos">
+               <i class="fa-sharp fa-solid fa-video"></i> Videos</a>
+         </div>
+         <br>
+         <div *ngIf="isLonged || islogin" class="link">
+            <a routerLink="/add">
+               <i class="fa-solid fa-plus"></i> Agregar</a>
+         </div>
+         <br>
+         <div class="link">
+            <a *ngIf="isLonged || islogin" routerLink="/list2">
+               <i class="fa-solid fa-bag-shopping"></i> Articulos</a>
+         </div>
+         <br>
+         <div *ngIf="isLonged || islogin" class="link">
+            <a routerLink="/cart">
+               <i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+         </div>
+         <br>
+         <div *ngIf="isLonged || islogin" class="link">
+            <a routerLink="/admin">
+               <i class="fa-solid fa-user"></i> admin</a>
+         </div>
+         <br>
+      </div>
+   </div>
+</div>
+
+<script>
+   const menuBtn = document.querySelector(".menu-icon span");
+   const searchBtn = document.querySelector(".search-icon");
+   const cancelBtn = document.querySelector(".cancel-icon");
+   const items = document.querySelector(".nav-items");
+   const form = document.querySelector("form");
+   menuBtn.onclick = () => {
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+   }
+   cancelBtn.onclick = () => {
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+   }
+   searchBtn.onclick = () => {
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+   }
+</script>
+
+<script>
+   window.fbAsyncInit = function () {
+      FB.init({
+         appId: '{your-app-id}',
+         cookie: true,
+         xfbml: true,
+         version: '{api-version}'
+      });
+
+      FB.AppEvents.logPageView();
+
+   };
+
+   (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>

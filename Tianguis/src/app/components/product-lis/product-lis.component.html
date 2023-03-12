@@ -1,0 +1,36 @@
+<!--<div class="card">
+  <div class="img">
+    <img [src]="producto.image">
+  </div>
+  <div class="contenido">
+    <h2 class="card-title">{{producto.nombre}}</h2>
+    <p class="card-text">{{producto.descripcion}}</p>
+    <p class="card-text">{{producto.precio}}$</p>
+  </div>
+  <div class="boton">
+    <button type="button" (click)="addToCart()">
+      Agregar Card</button>
+  </div>
+</div>-->
+
+
+<div class="card">
+  <div class="imagen">
+    <img [src]="producto.image">
+  </div>
+  <div class="contenido">
+    <br>
+    <h2 class="card-title">{{producto.nombre}}</h2>
+    <br>
+    <p class="card-text">{{producto.descripcion}}</p>
+    <br>
+    <p class="card-text">${{producto.precio}}</p>
+    <br>
+    <div class=" acomodo">
+      <button type="submit" (click)="addToCart()">
+        <i class="fa-solid fa-cart-shopping"></i> Agregar Carrito</button>
+      <button type="submit" routerLink="/map">
+        <i class="fa-sharp fa-solid fa-map-location-dot"></i> Visite nuestra sucursal</button>
+    </div>
+  </div>
+</div>
